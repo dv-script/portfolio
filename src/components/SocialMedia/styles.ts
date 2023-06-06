@@ -7,10 +7,19 @@ export const SocialMediaLink = styled.a`
     align-items: center;
     width: 4rem;
     height: 4rem;
-    border: 2px solid #ccc;
+    border: 2px solid black;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    transition: 300ms;
+
+    &:hover {
+        border: none;
+    }
+
+    &:hover > :nth-child(1) {
+        color: #fff;
+    }
 `;
 
 export const SocialMediaSpan = styled.span`

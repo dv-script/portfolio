@@ -1,6 +1,4 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import {FiGithub} from "react-icons/fi";
-import {FaLinkedinIn} from "react-icons/fa";
 
 import * as Styled from "./styles";
 
@@ -10,7 +8,7 @@ import SocialMedia from "../../components/SocialMedia";
 export default function Home() {
 
     const [description] = useTypewriter({
-        words: ["Frontend developer with 1 year of experience. Specializing in ReactJS, JavaScript, Tailwind, Sass, and Styled Components. Creating dynamic and responsive web interfaces."],
+        words: ["Frontend developer with 1 year of experience. Specializing in ReactJS, Typescript, JavaScript, Tailwind, Sass, and Styled Components. Creating dynamic and responsive web interfaces."],
         typeSpeed: 25,
       });
 
@@ -22,16 +20,16 @@ export default function Home() {
                 <Styled.LeftContent>
 
                     <SocialMedia url="https://github.com/dv-script">
-                        <FiGithub color={"ccc"} size={35}/>
+                        <Styled.GithubIcon />
                     </SocialMedia>
 
                     <SocialMedia url="https://www.linkedin.com/in/davi-hasson-castro-3968751ab/">
-                        <FaLinkedinIn color={"#ccc"} size={35}/>
+                        <Styled.LinkedInIcon />
                     </SocialMedia>
 
                 </Styled.LeftContent>
                 
-                <Styled.RightContent>
+                <Styled.MiddleContent>
 
                     <Styled.Title>Hi, I am</Styled.Title>
                     <Styled.Subtitle>Davi</Styled.Subtitle>
@@ -40,9 +38,13 @@ export default function Home() {
                         {description}<Cursor />
                     </Styled.Description>
 
-                </Styled.RightContent>
+                </Styled.MiddleContent>
 
                 
+                <Styled.RightContent>
+                    <Styled.ProfileImage />
+                </Styled.RightContent>
+
             </Styled.Container>
         </>
     )
